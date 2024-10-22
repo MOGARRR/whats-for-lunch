@@ -14,7 +14,11 @@
  */
 
 const whatToDoForLunch = function(hungry, availableTime) {
-  console.log("I don't know what to do!");
+  const lunch = hungry === false ? 'Then get back to it and work up an appetite!'
+  :availableTime < 20 ? 'You should get a snack or eat something at home!'
+  : availableTime >= 20 && availableTime < 30 ? 'You should take a break and cook something tasty!'
+  :'Are you sure you have that much time?\nMaybe you should keep going for a bit?';
+  console.log(lunch);
 }
 
 
